@@ -10,7 +10,7 @@ describe('Server Tests', () => {
       it('should serve an html page in the body', (done) => {
         testRequest(myapp)
           .get('/')
-          .expect('Content-Type', 'text/html; charset=utf-8')
+          .expect('Content-Type', /text\/html/)
           .expect(200, done);
       });
     });
