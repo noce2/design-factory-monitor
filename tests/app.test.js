@@ -14,5 +14,21 @@ describe('Server Tests', () => {
           .expect(200, done);
       });
     });
+    describe('When the client visits /login', () => {
+      it('should serve an html page in the body', (done) => {
+        testRequest(myapp)
+          .get('/login')
+          .expect('Content-Type', /text\/html/)
+          .expect(200, done);
+      });
+    });
+    describe('When the client visits /signup', () => {
+      it('should serve an html page in the body', (done) => {
+        testRequest(myapp)
+          .get('/signup')
+          .expect('Content-Type', /text\/html/)
+          .expect(200, done);
+      });
+    });
   });
 });
