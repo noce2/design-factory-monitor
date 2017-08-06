@@ -1,0 +1,37 @@
+/* {
+  border: 1px dashed black;
+} */
+.landing-page {
+  height: 90vh;
+  
+}
+
+.main-container .content-container .content-area {
+  padding: 0; 
+} 
+
+.main-container .content-container .content-area .landing-page{
+  padding: 48px 42px 42px 48px;
+} 
+
+.main-container .content-container .content-area .landing-page .section1-content h1{
+  margin-top: 0;
+  font-size: 64px;
+  color: #000;
+} 
+
+.main-container .content-container .content-area .landing-page .section1-content .sub-description{
+  font-size: 18px;
+} 
+
+.main-container .content-container .content-area .landing-page .section1-content .section1-btn{
+  margin: 36px 0px 24px;
+}
+
+#section-1 {
+  background-image: url('/public/images/landingpage-bg1-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center top;
+}
+
