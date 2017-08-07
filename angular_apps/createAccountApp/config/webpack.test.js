@@ -25,7 +25,7 @@ module.exports = {
         use: [{
           loader: 'awesome-typescript-loader',
           options: {
-            configFileName: './src/tsconfig.json'
+            configFileName: './angular_apps/createAccountApp/src/tsconfig.json',
           }
         }, {
           loader: 'angular2-template-loader'
