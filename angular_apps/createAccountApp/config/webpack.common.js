@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     'polyfills': './angular_apps/createAccountApp/src/polyfills.ts',
     'vendor': './angular_apps/createAccountApp/src/vendor.ts',
-    'app': './angular_apps/createAccountApp/src/main.ts'
+    'app': './angular_apps/createAccountApp/src/main.ts',
   },
 
   resolve: {
@@ -49,9 +49,11 @@ module.exports = {
       {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
-        loader: 'raw-loader'
+        loader: 'raw-loader',
       }
-    ]
+    ],
+    noParse: /clarity-icons\.min\.js/,
+    
   },
 
   plugins: [
@@ -72,3 +74,5 @@ module.exports = {
     }),
   ],
 };
+
+console.log(helpers.root('src', 'app'));
