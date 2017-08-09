@@ -1,23 +1,48 @@
-<clr-wizard #wizardmd [(clrWizardOpen)]="mdOpen" clrWizardSize="md">
-    <clr-wizard-title>Medium-Sized Wizard</clr-wizard-title>
+<clr-wizard #wizardlg [(clrWizardOpen)]="lgOpen" clrWizardSize="lg">
+    <clr-wizard-title>Create An Account</clr-wizard-title>
 
     <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
     <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
     <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
     <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 1</ng-template>
+    <clr-wizard-page
+        clrWizardPagePreventDefault="true"
+        (clrWizardPageOnCommit)="onCommit()"
+        (clrWizardPageOnCancel)="doCancel()">
+        <ng-template clrPageTitle>Find Your Company</ng-template>
+        <div class="spinner" *ngIf="loadingFlag">
+            Loading...
+        </div>
+        <clr-alert [clrAlertType]="'alert-info'" [clrAlertClosable]="false">
+            <div class="alert-item">
+                This&nbsp;<a
+                    href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy"
+                    target="_blank">wiki article</a>&nbsp;might help you answer the question.
+            </div>
+        </clr-alert>
+        <clr-alert *ngIf="errorFlag" [clrAlertType]="'alert-danger'">
+            <div class="alert-item">
+                Your answer is incorrect.
+            </div>
+        </clr-alert>
+        <form #myForm="ngForm" [class.hide]="loadingFlag">
+            <section class="form-block">
+                <div class="form-group">
+                    <label for="fourtyTwoInput">The answer to life, the universe and everything</label>
+                    <input type="text" id="fourtyTwoInput" [(ngModel)]="answer" name="answer">
+                </div>
+            </section>
+        </form>
+    </clr-wizard-page>
+
+    <clr-wizard-page #aboutYourCompany>
+        <ng-template clrPageTitle>About Your Company</ng-template>
         ...
     </clr-wizard-page>
 
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 2</ng-template>
-        ...
-    </clr-wizard-page>
-
-    <clr-wizard-page>
-        <ng-template clrPageTitle>Page 3</ng-template>
+    <clr-wizard-page #aboutYou>
+        <ng-template clrPageTitle>About You</ng-template>
         ...
     </clr-wizard-page>
 </clr-wizard>
