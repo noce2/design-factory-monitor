@@ -1,4 +1,4 @@
-export class UserAccount {
+export class User {
   constructor(
     public firstName: string,
     public lastName: string,
@@ -11,7 +11,8 @@ export class UserAccount {
   }
 
   authroisations: String[];
-  
+  exportControlRestrictions: String[];
+
   private addAuthorisation(authorisationToAdd: string):void {
     this.authroisations.push(authorisationToAdd);
   }
