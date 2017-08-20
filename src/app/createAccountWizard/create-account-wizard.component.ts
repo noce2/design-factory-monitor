@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Wizard } from 'clarity-angular';
 
-import { User } from '../../../../../app_server/models/user';
-import { Organisation } from '../../../../../app_server/models/organisation';
+import { User } from '../../../app_server/models/user';
+import { Organisation } from '../../../app_server/models/organisation';
 
 @Component({
   selector: 'wizard-createaccount',

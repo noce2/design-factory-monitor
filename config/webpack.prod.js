@@ -12,7 +12,7 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
 
   output: {
-    path: helpers.root('..', '..', 'public', 'createAccountApp'),
+    path: helpers.root('public', 'createAccountApp'),
     // this public path is the path for browser get requests to
     // the js & css resources linked in this file
     publicPath: '/public/createAccountApp',
