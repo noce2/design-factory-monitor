@@ -5,7 +5,7 @@ import { User } from '../../../app_server/models/user';
 import { Organisation } from '../../../app_server/models/organisation';
 
 @Component({
-  selector: 'wizard-createaccount',
+  selector: 'insight360-createaccountwizard',
   templateUrl: `./create-account-wizard.component.html`,
   styleUrls: ['./create-account-wizard.component.css'],
 })
