@@ -8,8 +8,7 @@ const router = express.Router();
 /* GET home page. */
 router.get('/', ctrlMain.index);
 
-/* Login Page */
-router.get('/login', ctrlMain.login);
-router.get('/signup', ctrlMain.createAnAccount);
+/* All other links to Angular */
+router.get('*', ctrlMain.index);
 
 module.exports = router;
