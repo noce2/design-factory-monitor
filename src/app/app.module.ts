@@ -13,6 +13,7 @@ import { ProductPageComponent } from './productPage/product.component';
 import { LoginPageComponent } from './loginPage/login.component';
 import { CreateAccountWizardComponent } 
 from './createAccountWizard/create-account-wizard.component';
+import { PageNotFoundComponent } from './pageNotFound/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ from './createAccountWizard/create-account-wizard.component';
     CreateAccountWizardComponent, 
     LoginPageComponent, 
     ProductPageComponent,
+    PageNotFoundComponent,
   ],
   bootstrap: [AppComponent],
 })
