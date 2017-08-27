@@ -1,5 +1,4 @@
 import { AppComponent } from './app.component';
-import { CreateAccountWizardComponent } from './createAccountWizard/create-account-wizard.component';
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
@@ -8,7 +7,6 @@ import { DebugElement } from '@angular/core';
 describe('AppComponent', () => {
   let de: DebugElement;
   let comp: AppComponent;
-  let wizard: CreateAccountWizardComponent;
   let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async(() => {
