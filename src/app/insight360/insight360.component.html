@@ -1,0 +1,56 @@
+<clr-main-container>
+  <clr-header class="header header-4">
+      <div class="branding">
+      <a href="" class="nav-link">
+          <clr-icon shape="dashboard" class="is-inverse"></clr-icon>
+          <span class="title">Insight360.io</span>
+      </a>
+      </div>
+      <div class="header-actions">
+          <a class="nav-link nav-icon">
+              <clr-icon shape="chat-bubble"></clr-icon>
+          </a>
+          <a class="nav-link nav-icon">
+              <clr-icon shape="bell"></clr-icon>
+          </a>
+          <a class="nav-link nav-icon">
+              <clr-icon shape="help"></clr-icon>
+          </a>
+          <clr-dropdown>
+            <button class="nav-icon" clrDropdownTrigger>
+                <clr-icon shape="user"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                <a clrDropdownItem>timilehin.akpanibo@companya.com</a>
+                <a href="..." clrDropdownItem>About</a>
+                <a href="..." clrDropdownItem>Preferences</a>
+                <a href="..." clrDropdownItem>Log out</a>
+            </clr-dropdown-menu>
+          </clr-dropdown>          
+      </div>
+  </clr-header>
+  <div class="content-container" id="insight360">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+    <clr-vertical-nav>
+        <a clrVerticalNavLink routerLink="./dashboard" routerLinkActive="active">
+          <clr-icon clrVerticalNavIcon shape="analytics"></clr-icon>
+          Dashboard
+        </a>
+        <a clrVerticalNavLink routerLink="./audit" routerLinkActive="active">
+          <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+          Audit
+        </a>
+        <a clrVerticalNavLink routerLink="./create" routerLinkActive="active">
+          <clr-icon clrVerticalNavIcon shape="design"></clr-icon>
+          Create
+        </a>
+        <a clrVerticalNavLink routerLink="./admin" routerLinkActive="active">
+          <clr-icon clrVerticalNavIcon shape="users"></clr-icon>
+          Admin
+        </a>
+    </clr-vertical-nav>
+  </div>
+</clr-main-container>

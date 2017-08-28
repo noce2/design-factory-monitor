@@ -59,6 +59,7 @@ typings/
 
 # particular to my work style
 draft_items
+draftCommitMessage.txt
 
 # Local Dev Mongodb 
 data

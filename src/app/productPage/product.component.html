@@ -1,28 +1,15 @@
-<div class="content-container">
-    <div class="content-area" id="product-page-content">
-        <section class="landing-page" id="section-1">
-            <div class="section1-content">
-            <h1>Understand Your Design Factory</h1>
-            <p class="sub-description">
-                Describe your process, visualise its performance and optimise your workflow.
-            </p>
-            <div class="section1-btn">
-                <a class="btn btn-primary" routerLink="/signup" routerLinkActive="active">Create An Account</a>
-            </div>
-            </div>
-        </section>
-        <!-- page 2 -->
-        <section class="landing-page" id="section-2">
-            <div class="section2-content">
-            <h1>Some More Selling Points</h1>
-            <p class="sub-description">
-                Bla-Bla.
-            </p>
-            <div class="section2-btn">
-                <a class="btn btn-primary" routerLink="/signup" routerLinkActive="active">
-                    Create An Account</a>
-            </div>
-            </div>
-        </section>
-    </div>
-</div>
+<clr-main-container>
+    <clr-header class="header header-4">
+        <div class="branding">
+        <a href="" class="nav-link">
+            <clr-icon shape="dashboard" class="is-inverse"></clr-icon>
+            <span class="title">Insight360.io</span>
+        </a>
+        </div>
+        <div class="header-actions">
+            <a routerLink="/login" routerLinkActive="active" class="nav-link"><span class="nav-text">Sign In</span></a>
+            <a routerLink="/signup" routerLinkActive="active"  class="nav-link"><span class="nav-text">Create An Account</span></a>
+        </div>
+    </clr-header>
+    <router-outlet></router-outlet>
+</clr-main-container>

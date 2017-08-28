@@ -5,9 +5,13 @@ quality, cost and delivery metrics of a "design factory".
 ## User Stories (Top-level Requirements)
 1. As a General User I can see all the designs progressing through my design factory and their position along the "design production line".
 2. As a General User I can see, for each design on my production line, the number of times it has to be modified before it passes a review.
+    * I can see an average for multiple designs
+    * I can see a exact data for a particular design
 3. As a General User I can see for each design, the % quality at its current stage in the design production line.
 4. As a General User I can see the amount of hours spent on a design between each review. 
+    * I can see this when looking at a single design. I do not want this averaged across multiple designs.
 5. As a General User I can see what processes my design has passed through to get to its current state.
+    * I can see this when looking at a single design, not averaged across multiple designs.
 6. As a General User I can filter all the design data based on its owning organisation, stage in the process, % quality, hours spent between reviews, or number of times it has failed a review.
 7. As a Designer I can be made responsible for a design.
 8. As a Designer I can assign a particular review to an approver within my organisation.
