@@ -10,11 +10,11 @@ export class User {
     
   }
 
-  authroisations: String[];
+  authorisations: String[];
   exportControlRestrictions: String[];
 
   private addAuthorisation(authorisationToAdd: string):void {
-    this.authroisations.push(authorisationToAdd);
+    this.authorisations.push(authorisationToAdd);
   }
 
   generalUserAuthorisation(): void {
