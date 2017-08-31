@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { Insight360AppComponent } from './insight360.component';
-import { Insight360DashboardComponent } from './dashboard/insight360-dashboard.component';
+import { Insight360AppComponent } from './i360.component';
+import { Insight360DashboardComponent } from './dashboard/i360-dashboard.component';
+import { Insight360AuditComponent } from './audit/i360-audit.component';
 
 const insight360Routes: Routes = [
   { path: 'insight360', 
@@ -11,6 +12,10 @@ const insight360Routes: Routes = [
       {
         path: 'dashboard',
         component: Insight360DashboardComponent,
+      },
+      {
+        path: 'audit',
+        component: Insight360AuditComponent,
       },
     ],
   },
