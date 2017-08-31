@@ -8,6 +8,7 @@ quality, cost and delivery metrics of a "design factory".
     * I can see an average for multiple designs
     * I can see a exact data for a particular design
 3. As a General User I can see for each design, the % quality at its current stage in the design production line.
+    * I can see an average for multiple designs
 4. As a General User I can see the amount of hours spent on a design between each review. 
     * I can see this when looking at a single design. I do not want this averaged across multiple designs.
 5. As a General User I can see what processes my design has passed through to get to its current state.

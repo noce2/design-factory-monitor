@@ -9,10 +9,11 @@ import { DxCircularGaugeModule,
   DxChartModule, 
 } from 'devextreme-angular';
 
-import { Insight360RoutingModule } from './insight360-routing.module';
+import { Insight360RoutingModule } from './i360-routing.module';
 
-import { Insight360AppComponent } from './insight360.component';
-import { Insight360DashboardComponent } from './dashboard/insight360-dashboard.component';
+import { Insight360AppComponent } from './i360.component';
+import { Insight360DashboardComponent } from './dashboard/i360-dashboard.component';
+import { Insight360AuditComponent } from './audit/i360-audit.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { Insight360DashboardComponent } from './dashboard/insight360-dashboard.c
   declarations: [
     Insight360AppComponent,
     Insight360DashboardComponent,
+    Insight360AuditComponent,
   ],
   exports: [
 

@@ -4,8 +4,8 @@ import { DxCircularGaugeModule,
 
 
 @Component({
-  templateUrl: './insight360-dashboard.component.html',
-  styleUrls: ['./insight360-dashboard.component.css'],
+  templateUrl: './i360-dashboard.component.html',
+  styleUrls: ['./i360-dashboard.component.css'],
 })
 
 export class Insight360DashboardComponent {
