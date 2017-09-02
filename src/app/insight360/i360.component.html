@@ -34,7 +34,7 @@
     <div class="content-area">
       <router-outlet></router-outlet>
     </div>
-    <clr-vertical-nav>
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true">
         <a clrVerticalNavLink routerLink="./dashboard" routerLinkActive="active">
           <clr-icon clrVerticalNavIcon shape="analytics"></clr-icon>
           Dashboard

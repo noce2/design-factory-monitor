@@ -13,7 +13,7 @@ import { Insight360RoutingModule } from './i360-routing.module';
 
 import { Insight360AppComponent } from './i360.component';
 import { Insight360DashboardComponent } from './dashboard/i360-dashboard.component';
-import { Insight360AuditComponent } from './audit/i360-audit.component';
+import { Insight360AuditListComponent } from './audit/i360-audit-list.component';
 
 @NgModule({
   imports: [
@@ -27,7 +27,7 @@ import { Insight360AuditComponent } from './audit/i360-audit.component';
   declarations: [
     Insight360AppComponent,
     Insight360DashboardComponent,
-    Insight360AuditComponent,
+    Insight360AuditListComponent,
   ],
   exports: [
 
