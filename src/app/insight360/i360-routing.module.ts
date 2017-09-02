@@ -17,6 +17,10 @@ const insight360Routes: Routes = [
         path: 'audit',
         component: Insight360AuditComponent,
       },
+      {
+        path: '',
+        component: Insight360DashboardComponent,
+      },
     ],
   },
 ];
