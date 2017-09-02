@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { Insight360AppComponent } from './i360.component';
 import { Insight360DashboardComponent } from './dashboard/i360-dashboard.component';
-import { Insight360AuditComponent } from './audit/i360-audit.component';
+import { Insight360AuditComponent } from './audit/i360-audit.component'; 
 
 const insight360Routes: Routes = [
   { path: 'insight360', 
