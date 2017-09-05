@@ -4,6 +4,9 @@ import { Design } from '../../../../app_server/models/design';
 @Injectable()
 
 export class DesignService {
+  // this service will handle retrieving designs from the backend
+  // creating new designs and validating data going into a design
+
   dummyData: Design[] = [
     new Design('1','Design 1', 'Joseph Akingbusi', 'A glorious work of engineering'),
     new Design('2','Design 2', 'Joseph Akingbusi', 'A glorious work of engineering'),
@@ -17,5 +20,30 @@ export class DesignService {
 
   getDesignData(): Design[] {
     return (this.dummyData);
+  }
+
+  createBlankDesign() {
+  // this has been created here rather than on the design class
+  // because the design class will not be instantiated 
+  // the service, however will be.
+
+    return new Design('','','','');
+  }
+
+  addNewDesign(input:Design) {
+    // this will need some sort of error checking 
+    // so that you can send a message to user when it succeeds
+    this.dummyData.push(input);
+  }
+
+  editExistingDesign(input:Design) {
+    // this will need some serious error checking etc
+    // this will also need some sort of error checking 
+    // so that you can send a message to user when it succeeds
+    const itemToReplace = this.dummyData.findIndex((each) => {
+      return each.id === input.id;
+    });
+
+    this.dummyData[itemToReplace] = input;
   }
 }

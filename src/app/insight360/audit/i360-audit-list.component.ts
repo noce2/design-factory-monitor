@@ -33,7 +33,7 @@ export class Insight360AuditListComponent implements OnInit {
     this.toApprove = this.selected[0];
   }    
 
-  onAuditDetailClose() {
+  onDetailClose() {
     this.toApprove = undefined;
   }
 }

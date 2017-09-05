@@ -4,10 +4,11 @@
         
             <clr-dg-action-bar>
                 <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" (click)="onCreate()"><clr-icon shape="design"></clr-icon> Create</button>
                     <button type="button" class="btn btn-sm btn-secondary" (click)="onAdd()"><clr-icon shape="plus"></clr-icon> Add
                         to group</button>
                     <button type="button" class="btn btn-sm btn-secondary" (click)="onDelete()" ><clr-icon shape="close"></clr-icon> Delete</button>
-                    <button type="button" class="btn btn-sm btn-secondary" (click)="onEdit()" *ngIf="selected.length == 1"><clr-icon shape="certificate"></clr-icon> Audit</button>
+                    <button type="button" class="btn btn-sm btn-secondary" (click)="onEdit()" *ngIf="selected.length == 1"><clr-icon shape="pencil"></clr-icon> Edit</button>
                 </div>
             </clr-dg-action-bar>
         
@@ -29,39 +30,39 @@
             </clr-dg-footer>
         </clr-datagrid>
     </div>
-    <div class="col-lg col-md-12 col-sm-12 col-xs-12" *ngIf="toApprove">
-        <form #designApprovalForm="ngForm">
+    <div class="col-lg col-md-12 col-sm-12 col-xs-12" *ngIf="detail">
+        <form #designDetailForm="ngForm">
                 <button class="close" type="button" (click)="onDetailClose()">
                     <clr-icon shape="window-close" size="36"></clr-icon>
                 </button>
             <section class="form-block">
-                <label>Audit Design Package</label>
+                <label>Create Design Package</label>
                 <div class="form-group">
                     <label for="designId">
                         ID
                     </label>
-                    <input type="text" id="designID" size="15" [(ngModel)]="toApprove.id" name="designID">
+                    <input type="text" id="designID" size="15" [(ngModel)]="detail.id" name="designID">
                 </div>
                 <div class="form-group">
                     <label for="designName">
                         Name
                     </label>
-                    <input type="text" id="designName" size="25" [(ngModel)]="toApprove.name" name="designName">
+                    <input type="text" id="designName" size="25" [(ngModel)]="detail.name" name="designName">
                 </div>
                 <div class="form-group">
                     <label for="designCreator">
                         Creator
                     </label>
-                    <input type="text" id="designCreator" size="25" [(ngModel)]="toApprove.creator" name="designCreator">
+                    <input type="text" id="designCreator" size="25" [(ngModel)]="detail.creator" name="designCreator">
                 </div>
                 <div class="form-group">
                     <label for="designBriefDescription">
                         Brief Description
                     </label>
-                    <textarea id="designBriefDescription" rows="3" [(ngModel)]="toApprove.briefDescription" name="designBriefDescription"></textarea>
+                    <textarea id="designBriefDescription" rows="3" [(ngModel)]="detail.briefDescription" name="designBriefDescription"></textarea>
                 </div>
-                <button class="btn btn-success">Approve</button>
-                <button class="btn btn-danger">Reject</button>
+                <button class="btn btn-success" (click)="onSave()">Save</button>
+                <button class="btn btn-danger"  (click)="onDetailClose()">Cancel</button>
             </section>
         </form>
     </div>
