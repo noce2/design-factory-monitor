@@ -24,16 +24,28 @@
   font-size: 18px;
 } 
 
-#product-page-content .landing-page .section1-content .section1-btn{
+#product-page-content .landing-page .section1-content .section1-btns{
   margin: 36px 0px 24px;
 }
 
-#product-page-content .landing-page .section2-content .section2-btn{
+#product-page-content .landing-page .section1-content .section1-btns a {
+  margin: 12px 0px 12px;
+}
+
+#product-page-content .landing-page .section2-content .section2-btns{
   margin: 36px 0px 24px;
 }
 
-#product-page-content .landing-page .section3-content .section3-btn{
+#product-page-content .landing-page .section2-content .section2-btns a {
+  margin: 12px 0px 12px;
+}
+
+#product-page-content .landing-page .section3-content .section3-btns{
   margin: 36px 0px 24px;
+}
+
+#product-page-content .landing-page .section3-content .section3-btns a {
+  margin: 12px 0px 12px;
 }
 
 #section-1 {
