@@ -28,6 +28,14 @@
   margin: 36px 0px 24px;
 }
 
+#product-page-content .landing-page .section2-content .section2-btn{
+  margin: 36px 0px 24px;
+}
+
+#product-page-content .landing-page .section3-content .section3-btn{
+  margin: 36px 0px 24px;
+}
+
 #section-1 {
   background-image: url('/public/images/landingpage-bg1-2.jpg');
   background-repeat: no-repeat;
