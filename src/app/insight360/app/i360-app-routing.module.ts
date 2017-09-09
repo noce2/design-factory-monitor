@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { Insight360AppComponent } from './i360.component';
+import { Insight360AppComponent } from './i360-app.component';
 import { Insight360DashboardComponent } from './dashboard/i360-dashboard.component';
 import { Insight360AuditComponent } from './audit/i360-audit.component'; 
 import { Insight360CreateComponent } from './create/i360-create.component'; 
@@ -41,7 +41,7 @@ const insight360Routes: Routes = [
   ],
 })
 
-export class Insight360RoutingModule {
+export class Insight360AppRoutingModule {
 
 }
 

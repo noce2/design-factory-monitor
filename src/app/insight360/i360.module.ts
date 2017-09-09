@@ -1,46 +1,40 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { ClarityModule } from 'clarity-angular';
 
-import { DxCircularGaugeModule, 
-  DxChartModule, 
-} from 'devextreme-angular';
+import { Insight360Component } from './i360.component';
+import { Insight360LoadingComponent } from './loading/i360-loading.component';
 
-import { Insight360RoutingModule } from './i360-routing.module';
-
-import { Insight360AppComponent } from './i360.component';
-import { Insight360DashboardComponent } from './dashboard/i360-dashboard.component';
-import { Insight360AuditComponent } from './audit/i360-audit.component';
-import { Insight360AuditListComponent } from './audit/i360-audit-list.component';
-import { Insight360CreateComponent } from './create/i360-create.component'; 
-import { Insight360CreateListComponent } from './create/i360-create-list.component'; 
+const i360ModuleRoots: Routes = [
+  
+  { path: 'insight360', 
+    component: Insight360Component, 
+    children: [
+      { path: '', component: Insight360LoadingComponent },
+      // the Insight360App Module is loaded this way to allow lazy-loading
+      { path: 'app', loadChildren: './app/i360-app.module#Insight360AppModule' },
+    ],
+  },
+  
+];
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    DxCircularGaugeModule,
-    DxChartModule,
-    Insight360RoutingModule,
+    RouterModule.forChild(i360ModuleRoots),
     ClarityModule.forChild(),
   ],
   declarations: [
-    Insight360AppComponent,
-    Insight360DashboardComponent,
-    Insight360AuditComponent,
-    Insight360AuditListComponent,
-    Insight360CreateComponent,
-    Insight360CreateListComponent,
+    Insight360Component,
+    Insight360LoadingComponent,
   ],
   exports: [
-
+    RouterModule,
   ],
 })
 
 export class Insight360Module {
 
 }
-
