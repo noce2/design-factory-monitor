@@ -15,7 +15,7 @@ module.exports = webpackMerge(commonConfig, {
     path: helpers.root('public', 'insight360App'),
     // this public path is the path for browser get requests to
     // the js & css resources linked in this file
-    publicPath: '/public/insight360App',
+    publicPath: '/public/insight360App/',
     filename: '[name].[hash].js',
     chunkFilename: '[id].[hash].chunk.js',
   },
