@@ -1,6 +1,9 @@
-.loadScreen{
+.main-container .content-container .content-area .row .col-xs .loadScreen{
   z-index: 100;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
-  height: 100vh;
-  width: 100vw;
+  padding: 48px;
 }
