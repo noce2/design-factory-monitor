@@ -28,10 +28,13 @@ module.exports = {
           loader: 'awesome-typescript-loader',
           options: {
             configFileName: './src/tsconfig.json',
-          }
+          },
         }, {
-          loader: 'angular2-template-loader'
-        }]
+          loader: 'angular2-router-loader',
+        },
+        {
+          loader: 'angular2-template-loader',
+        }],
       },
       {
         test: /\.html$/,

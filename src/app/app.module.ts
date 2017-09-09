@@ -7,7 +7,6 @@ import { HttpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
 
 import { AppRoutingModule } from './app-routing.module';
-import { Insight360Module } from './insight360/i360.module';
 import { ProductPageModule } from './productPage/product.module';
 
 import { AppComponent } from './app.component';
@@ -19,8 +18,7 @@ import { PageNotFoundComponent } from './pageNotFound/page-not-found.component';
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
-    Insight360Module, 
+    HttpModule, 
     ProductPageModule,
     AppRoutingModule,// this must be after all modules containing routes
     ClarityModule.forRoot(),

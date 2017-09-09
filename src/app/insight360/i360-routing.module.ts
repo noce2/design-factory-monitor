@@ -7,7 +7,9 @@ import { Insight360AuditComponent } from './audit/i360-audit.component';
 import { Insight360CreateComponent } from './create/i360-create.component'; 
 
 const insight360Routes: Routes = [
-  { path: 'insight360', 
+  // the root module is now loaded via app-routing module to allow lazy loading
+  // that also ensures the root of the application doesn't point to this automatically
+  { path: '', 
     component: Insight360AppComponent,
     children: [
       {
