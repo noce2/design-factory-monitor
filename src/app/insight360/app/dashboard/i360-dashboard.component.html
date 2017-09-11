@@ -1,0 +1,139 @@
+<clr-dropdown>
+    <button type="button" class="btn btn-outline-primary" clrDropdownTrigger>
+        Filter
+        <clr-icon shape="caret down"></clr-icon>
+    </button>
+    <clr-dropdown-menu clrPosition="bottom-right" *clrIfOpen>
+        <label class="dropdown-header">Organisational Level</label>
+        <clr-dropdown>
+            <button type="button" clrDropdownTrigger>Level 1</button>
+            <clr-dropdown-menu>
+                <button type="button" clrDropdownItem>Foo</button>
+                <clr-dropdown>
+                    <button type="button" clrDropdownTrigger>Bar</button>
+                    <clr-dropdown-menu clrPosition="bottom-right">
+                        <button type="button" clrDropdownItem>Baz</button>
+                    </clr-dropdown-menu>
+                </clr-dropdown>
+            </clr-dropdown-menu>
+        </clr-dropdown>
+        <clr-dropdown>
+                <button type="button" clrDropdownTrigger>Level 2</button>
+                <clr-dropdown-menu>
+                    <button type="button" clrDropdownItem>Foo</button>
+                    <clr-dropdown>
+                        <button type="button" clrDropdownTrigger>Bar</button>
+                        <clr-dropdown-menu clrPosition="bottom-right">
+                            <button type="button" clrDropdownItem>Baz</button>
+                        </clr-dropdown-menu>
+                    </clr-dropdown>
+                </clr-dropdown-menu>
+            </clr-dropdown>
+    </clr-dropdown-menu>
+</clr-dropdown>
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card" id="qualityCard">
+            <div class="card-block">
+                <div class="card-title">Quality</div>
+                <dx-circular-gauge id="gauge" [value]="80">
+                    <dxo-scale
+                        [startValue]="0"
+                        [endValue]="100"
+                        [tickInterval]="10">
+                        <dxo-label></dxo-label>
+                    </dxo-scale>
+                    <dxo-range-container>
+                        <dxi-range [startValue]="0" [endValue]="30" color="red"></dxi-range>
+                        <dxi-range [startValue]="30" [endValue]="80" color="orange"></dxi-range>
+                        <dxi-range [startValue]="80" [endValue]="100" color="green"></dxi-range>
+                    </dxo-range-container>
+                    <!-- <dxo-export [enabled]="true"></dxo-export> -->
+                </dx-circular-gauge>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card" id="costCard">
+            <div class="card-block">
+                <div class="card-title">Cost</div>
+                <dx-circular-gauge id="gauge" [value]="15">
+                    <dxo-scale
+                        [startValue]="-100"
+                        [endValue]="100"
+                        [tickInterval]="20">
+                        <dxo-label></dxo-label>
+                    </dxo-scale>
+                    <dxo-range-container>
+                        <dxi-range [startValue]="-100" [endValue]="70" color="red"></dxi-range>
+                        <dxi-range [startValue]="-70" [endValue]="-20" color="orange"></dxi-range>
+                        <dxi-range [startValue]="-20" [endValue]="20" color="green"></dxi-range>
+                        <dxi-range [startValue]="20" [endValue]="70" color="orange"></dxi-range>
+                        <dxi-range [startValue]="70" [endValue]="100" color="red"></dxi-range>
+                    </dxo-range-container>
+                    <!-- <dxo-export [enabled]="true"></dxo-export> -->
+                </dx-circular-gauge>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card" id="deliveryCard">
+            <div class="card-block">
+                <div class="card-title">Delivery</div>
+                <dx-circular-gauge id="gauge" [value]="80">
+                    <dxo-scale
+                        [startValue]="0"
+                        [endValue]="100"
+                        [tickInterval]="10">
+                        <dxo-label></dxo-label>
+                    </dxo-scale>
+                    <dxo-range-container>
+                        <dxi-range [startValue]="0" [endValue]="30" color="red"></dxi-range>
+                        <dxi-range [startValue]="30" [endValue]="80" color="orange"></dxi-range>
+                        <dxi-range [startValue]="80" [endValue]="100" color="green"></dxi-range>
+                    </dxo-range-container>
+                    <!-- <dxo-export [enabled]="true"></dxo-export> -->
+                </dx-circular-gauge>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="card" id="designDistributionCard">
+            <div class="card-block">
+                <div class="card-title">Location of Designs in Process</div>
+                <dx-chart
+                    id="designDistributionChart"
+                    [dataSource]="mockData">
+                    <dxi-series
+                        argumentField="stage"
+                        valueField="designs"
+                        type="bar"
+                        color="grey">
+                    </dxi-series>
+                    <dxo-legend [visible]="false"></dxo-legend>
+                </dx-chart>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="card" id="designReworkCard">
+                <div class="card-block">
+                    <div class="card-title">Average No of Rework Loops per Gate</div>
+                    <dx-chart
+                        id="designReworkChart"
+                        [dataSource]="mockData"
+                        >
+                        <dxi-series
+                            argumentField="stage"
+                            valueField="designs"
+                            type="bar"
+                            color="grey">
+                        </dxi-series>
+                        <dxo-legend [visible]="false"></dxo-legend>
+                    </dx-chart>
+                </div>
+            </div>
+        </div>
+</div>
