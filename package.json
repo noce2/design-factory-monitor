@@ -42,7 +42,7 @@
     "debug": "~2.6.3",
     "devextreme": "^17.1.5",
     "devextreme-angular": "^17.1.5",
-    "express": "~4.15.2",
+    "express": "~4.17.3",
     "morgan": "~1.8.1",
     "mutationobserver-shim": "^0.3.2",
     "pug": "~2.0.0-beta11",
